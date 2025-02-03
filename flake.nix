@@ -62,10 +62,8 @@
             hash = "sha256-25k4k7IUzmrYO1TF4ErDia1VT0vMxqQZuWviiesU1qc=";
           };
           installPhase = ''
-            echo $out
-            echo $src
-            mkdir -p $out/share/fonts
-            cp $src/nonicons.ttf $out/share/fonts/nonicons.ttf
+            mkdir -p $out/share/fonts/truetype
+            cp $src $out/share/fonts/truetype/nonicons.ttf
           '';
           meta = { description = "Nonicons font"; };
         };
